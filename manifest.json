@@ -6,7 +6,7 @@
 	"content_scripts":[
 		{
 			"js": ["js/jquery.md5.js", "js/jquery.js", "js/test.js"],
-			"matches": ["*://yandex.ru/*", "*://yandex.ru/*"],
+			"matches": ["*://mobile.olimpoks.ru/*"],
 			"run_at": "document_start"
 		}
 	],	
