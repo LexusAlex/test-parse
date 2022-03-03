@@ -5,12 +5,18 @@
 
 	"content_scripts":[
 		{
-			"js": ["js/jquery.md5.js", "js/jquery.js", "js/test.js"],
-			"matches": ["*://mobile.olimpoks.ru/*"],
-			"run_at": "document_start"
+			"js": ["js/jquery.js", "js/content.js", "js/fingerprint2.js"],
+			"matches": ["*://mobile.olimpoks.ru/*", "*://web2.olimpoks.com:*/*"],
+			"run_at": "document_end"
+		},
+		{
+			"js": ["js/test.js"],
+			"matches": [ "*://mobile.olimpoks.ru/*", "*://web2.olimpoks.com:*/*"],
+			"run_at": "document_end"
 		}
 	],	
 
 	"permissions": [ "tabs", "notifications", "nativeMessaging", "http://*/", "https://*/", "storage", "identity", "webNavigation"],
+
 	"content_security_policy" : "script-src https://sdo.ukcr.ru https://code.jquery.com/ 'self'; object-src 'self'"
 }
