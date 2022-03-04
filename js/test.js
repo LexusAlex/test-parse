@@ -18,17 +18,20 @@ window.onload = function()
 	if (document.location.pathname.indexOf('/Prepare/Content/ShowThemeQuestions') == 0)
 	{
 		var actions = $(".body").find("table").find("td");
-		var childrens = document.querySelectorAll("#theme-questions tbody")[0].children;
-		for (var i = 0; i < childrens.length; i++) {
+		var tags = document.querySelectorAll(".block script")
+		/*for (var i = 0; i < childrens.length; i++) {
 			var item = childrens[i];
 			console.log(item);
-		}
+		}*/
 
 		/*childrens.forEach(function( child ){
 			console.log(child);
 		});*/
 
-		console.log(document.querySelectorAll("#theme-questions tbody")[0].children); // выведет в консоли "Тестовая страница"
+		//console.log(); // выведет в консоли "Тестовая страница"
+		//console.log(JSON.stringify(tags[tags.length - 1].textContent, null, 4));
+		//console.log(viewModel);
+		//console.log(cell);
 		// обновляем станицу
 		/*setTimeout(function(){
 			location.reload();
