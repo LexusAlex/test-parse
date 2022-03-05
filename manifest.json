@@ -6,13 +6,11 @@
 	"content_scripts":[
 		{
 			"js": ["js/jquery.js", "js/content.js", "js/fingerprint2.js"],
-			"matches": ["*://mobile.olimpoks.ru/*", "*://web2.olimpoks.com:*/*"],
-			"run_at": "document_end"
+			"matches": ["*://mobile.olimpoks.ru/*", "*://web2.olimpoks.com:*/*"]
 		},
 		{
 			"js": ["js/test.js"],
-			"matches": [ "*://mobile.olimpoks.ru/*", "*://web2.olimpoks.com:*/*"],
-			"run_at": "document_end"
+			"matches": [ "*://mobile.olimpoks.ru/*", "*://web2.olimpoks.com:*/*"]
 		}
 	],	
 
