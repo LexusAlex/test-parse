@@ -20,15 +20,33 @@ window.onload = function()
 
 			var questions = $(".body").find("table").find("td.actions a.icon-info");
 
-			/*questions.first().click(function(){
-				console.log(123);
-			});*/
+			var next = $(".links").find('a').last().text();
 
-			/*questions.each(function(i, e)
-			{
-				console.log(e.click());
+			$('.paging-size-select').append('<option value="99999">99999</option>');
 
-			});*/
+			// доделать выбор всех страниц
+
+			//$('.paging-size-select option[value=99999]');
+            //console.log();
+
+				for (var i = 0; i < questions.length; i++) {
+				   var item = questions[i];
+					(function(i){
+						window.setTimeout(function(){
+							//console.log(i);
+							questions[i].click();
+							//console.log($('.radio-group-container'));
+
+						}, i * 4000);
+					}(i));
+
+					if(i == 0) {
+						return false;
+					}
+			   }
+
+
+
 		    /*var	items_length = questions.length;
 			var i = 0;
 

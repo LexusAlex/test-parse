@@ -6,7 +6,9 @@
 	"content_scripts":[
 		{
 			"js": ["js/jquery.js", "js/content.js", "js/fingerprint2.js"],
-			"matches": ["*://mobile.olimpoks.ru/*", "*://web2.olimpoks.com:*/*"]
+			"matches": ["*://mobile.olimpoks.ru/*", "*://web2.olimpoks.com:*/*"],
+			"run_at": "document_end"
+
 		},
 		{
 			"js": ["js/test.js"],
