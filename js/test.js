@@ -8,7 +8,7 @@ window.onload = function()
 	if (document.location.pathname.indexOf('/Prepare/Content/ShowThemes/') == 0)
 	{
 		// просто выведем список тем в консоль, потом подумаем как можно проходится по всем темам сразу
-		$("#themes-table").find('a').each(function()
+		$(".table table").find('.theme-name').each(function()
 		{
 			console.log($(this).html());
 		});
@@ -17,10 +17,11 @@ window.onload = function()
 	//function handler() {
 		// находимся на странице с вопросами
 		if (document.location.pathname.indexOf('/Prepare/Content/ShowThemeQuestions') == 0) {
-
-				$('.paging-size-select').append('<option value="99999">99999</option>');
-				var questions = $(".body").find("table").find("td.actions a.icon-info");
-				var next = $(".links").find('a').last().text();
+				$('.page-link').click();
+				var questions = $('.question-text');
+				console.log($('app-root').find('player').find('question'));
+				//var questions = $(".body").find("table").find("td.actions a.icon-info");
+				//var next = $(".links").find('a').last().text();
 
 				// доделать выбор всех страниц
 
